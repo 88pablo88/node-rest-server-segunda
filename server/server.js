@@ -22,7 +22,7 @@ app.use(require('./routes/usuario'))
 
 /*conexion a la base de datos*/
 
-mongoose.connect('mongodb://localhost:27017/cafe', (err, res) => {
+mongoose.connect(process.env.URLDB, (err, res) => { //process.env.URLDB viene del archivo config
 
     if (err) throw err;
 

@@ -22,7 +22,7 @@ app.use(require('./routes/usuario'))
 
 /*conexion a la base de datos*/
 
-mongoose.connect(process.env.URLDB, (err, res) => { //process.env.URLDB viene del archivo config
+mongoose.connect(process.env.URLDB, { useNewUrlParser: true }, (err, res) => { //process.env.URLDB viene del archivo config
 
     if (err) throw err;
 

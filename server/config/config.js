@@ -20,7 +20,7 @@ if (process.env.NODE_ENV === 'dev') {
 
 } else {
 
-    urlDB = 'mongodb+srv://Pablo:Wx3ON6uANP5ThksD@cluster0-q2ikz.mongodb.net/cafe'
+    urlDB = process.env.MONGO_URI //Variable de entorno configurada en la terminal
 }
 
 
